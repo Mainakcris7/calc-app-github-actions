@@ -1,3 +1,5 @@
+# Workflow taken from "Python application", search on workflow section of github
+
 name: Python calculator application
 
 # The events, which will trigger the following actions
@@ -36,6 +38,7 @@ jobs:
       run: |
         pytest
 
+  # Used teh references from => https://github.com/marketplace/actions/build-and-push-docker-images
   # 2nd job is to build the docker image and deploy it on Docker Hub
   deploy:
     needs: build   # This ensures that, the 'deploy' job is only executed after 'build' job, by default, all the jobs are executed parallelly
